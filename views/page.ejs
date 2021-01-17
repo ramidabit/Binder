@@ -4,15 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" />
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" media="screen"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+    <title>Binder</title>
 </head>
 <body>
-
-    <a href="/logout">Sign Out</a>  
-    <h1>Hi <%= user.name %></h1>
-
+    <a href="/logout">Sign Out</a>
+    <h1> Welcome, <%= user.name %>!</h1>
     <img src="<%= user.picture %>" alt="">
-
-
+    <div class="dropdown">
+        <button class="dropbtn">Select a Class</button>
+        <div class="dropdown-content">
+        <a href="#">ANTH</a>
+        <a href="#">ART</a>
+        <a href="#">AS AM</a>
+        <a href="#">ASTRO</a>
+        <a href="#">BL ST</a>
+        <a href="#">C LIT</a>
+        <a href="#">CH E</a>
+        <a href="#">CH ST</a>
+        <a href="#">CHEM</a>
+        <a href="#">CHIN</a>
+        <a href="#">CLASS</a>
+        <a href="#">CMPSC</a>
+        <a href="#">CNCSP</a>
+        <a href="#">COMM</a>
+        <a href="#">CS ART</a>
+        <a href="#">CS BIOL</a>
+        <a href="#">CS CMPSC</a>
+        <a href="#">CS LIT</a>
+        <a href="#">CS MATH</a>
+        <a href="#">CS PHYS</a>
+        <a href="#">DANCE</a>
+        <a href="#">EACS</a>
+        <a href="#">EARTH</a>
+        <a href="#">ECE</a>
+        <a href="#">ECON</a>
+        <a href="#">ED</a>
+        <a href="#">EEMB</a>
+        <a href="#">ENGL</a>
+        <a href="#">ENV S</a>
+        <a href="#">ESS</a>
+        <a href="#">FAMST</a>
+        <a href="#">FEMST</a>
+        <a href="#">FR</a>
+        <a href="#">GEOG</a>
+        <a href="#">GER</a>
+        <a href="#">GLOBL</a>
+        <a href="#">GREEK</a>
+        <a href="#">HEB</a>
+        <a href="#">HIST</a>
+        <a href="#">INT</a>
+        <a href="#">ITAL</a>
+        <a href="#">JAPAN</a>
+        <a href="#">LAIS</a>
+        <a href="#">LATIN</a>
+        <a href="#">LING</a>
+        <a href="#">MATH</a>
+        <a href="#">MATRL</a>
+        <a href="#">MCDB</a>
+        <a href="#">ME</a>
+        <a href="#">PHIL</a>
+        <a href="#">PHYS</a>
+        <a href="#">POL S</a>
+        <a href="#">PORT</a>
+        <a href="#">PSTAT</a>
+        <a href="#">PSY</a>
+        <a href="#">RG ST</a>
+        <a href="#">SHS</a>
+        <a href="#">SLAV</a>
+        <a href="#">SOC</a>
+        <a href="#">SPAN</a>
+        <a href="#">THTR</a>
+        <a href="#">TMP</a>
+        <a href="#">WRIT</a>
+    </div>
+      </div>
 </body>
 </html>
