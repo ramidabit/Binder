@@ -102,3 +102,5 @@ dist
 
 # TernJS port file
 .tern-port
+#firebase private key
+binder-52ad0-firebase-adminsdk-kt0pi-4c4c056db4.json

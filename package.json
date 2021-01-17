@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/nandyy719/Binder#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "firebase": "^8.2.3",
+    "firebase-admin": "^9.4.2"
   }
 }
