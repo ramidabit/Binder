@@ -15,7 +15,7 @@ const serviceAccount = JSON.parse(fs.readFileSync('binder-52ad0-firebase-adminsd
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount)
 });
-  
+
 const db = admin.firestore();
 
 
