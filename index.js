@@ -4,7 +4,6 @@ const admin = require('firebase-admin');
 const fs = require('fs');
 const path = require('path');
 const cookieParser = require('cookie-parser');
-const handlebars = require('express-handlebars');
 
 const PORT = process.env.PORT || 5000;
 
@@ -78,7 +77,7 @@ function checkAuthenticated(req, res, next){
         user.name = payload.name;
         user.email = payload.email;
         user.picture = payload.picture;
-        db.collection('users').add({
+        db.collection('users').doc(user.email).set({
             name: user.name,
             email: user.email
         }).then((doc)=>{
@@ -94,7 +93,7 @@ function checkAuthenticated(req, res, next){
       })
       .catch(err=>{
           res.redirect('/login')
-      })
+      });
 
 };
 
