@@ -35,7 +35,7 @@ app.get('/login', (req,res)=>{
     res.render('login');
 });
 
-app.post('/login', async (req,res)=>{
+app.post('/login',  (req,res)=>{
     let token = req.body.token;
     async function verify() {
         const ticket = await client.verifyIdToken({
@@ -44,23 +44,13 @@ app.post('/login', async (req,res)=>{
         });
         const payload = ticket.getPayload();
         const userid = payload['sub'];
-        return {
-            email: payload.email,
-            name: payload.name
-        };
       }
-      let user_details = await verify();
-      db.collection('users').add({
-        name: user_details.name,
-        email: user_details.email
-    }).then((doc)=>{
-        console.log('Document written with ID: ', doc.id);
-    }).catch((error) => {
-        console.error('Error creating document', error);
-    }); 
-
-    res.cookie('session-token', token);
-    res.send('success');
+      verify()
+      .then(()=>{
+          res.cookie('session-token', token);
+          res.send('success')
+      })
+      .catch(console.error);
  
 });
 app.get('/logout', (req, res)=>{
@@ -88,6 +78,14 @@ function checkAuthenticated(req, res, next){
         user.name = payload.name;
         user.email = payload.email;
         user.picture = payload.picture;
+        db.collection('users').add({
+            name: user.name,
+            email: user.email
+        }).then((doc)=>{
+            console.log('Document written with ID: ', doc.id);
+        }).catch((error) => {
+            console.error('Error creating document', error);
+        }); 
       }
       verify()
       .then(()=>{
